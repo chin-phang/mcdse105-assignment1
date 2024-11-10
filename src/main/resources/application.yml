@@ -1,0 +1,30 @@
+logging:
+  level:
+    root: INFO
+    org.mcdse105: TRACE
+
+server:
+  port: 8880
+
+spring:
+  application:
+    name: assignment1
+
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/mcdse105
+    username: root
+    password:
+    driverClassName: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+
+  liquibase:
+    changeLog: classpath:db/db.changelog-master.yml
