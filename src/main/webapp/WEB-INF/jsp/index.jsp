@@ -1,12 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=US-ASCII"
-    pageEncoding="US-ASCII"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="US-ASCII">
-<title>Homepage</title>
+	<meta charset="UTF-8">
+	<title>Homepage</title>
+	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+</head>
 </head>
 <body>
 	<h2>Welcome to KA Inventory Management System!</h2>
@@ -22,5 +24,7 @@
 	</div>
 
 	<footer style="margin-top: 20px;"><a href="/">KA Inventory System</a> &copy; 2024. Made with love in Penang.</footer>
+
+	<script src="/static/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
