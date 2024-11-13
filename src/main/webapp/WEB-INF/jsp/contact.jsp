@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Contact</title>
+<%@include file="lib-css.jsp" %>
 </head>
 <body>
 	<div class="container" style="margin-top: 10px; margin-bottom: 20px;">
@@ -13,8 +14,10 @@
 		<p>Address: 25-3 Jalan Wangsa Delima 10, Seksyen 5 Wangsa Maju, 53300 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur.</p>
 		<p>Email: khairulaming@rasapop.com.my</p>
 		<p>Tel: 011 - 16400164</p>
+
+	    <%@include file="footer.html" %>
 	</div>
 
-	<footer style="margin-top: 30px;"><a href="/">KA Inventory System</a> &copy; 2024. Made with love in Penang.</footer>
+	<%@include file="lib-js.jsp" %>
 </body>
 </html>

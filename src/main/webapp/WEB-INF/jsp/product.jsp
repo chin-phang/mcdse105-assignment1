@@ -5,51 +5,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>KA Inventory System | New Product</title>
+    <meta charset="UTF-8">
+    <title>KA Inventory System | New Product</title>
+    <%@include file="lib-css.jsp" %>
 </head>
 <body>
 	<div class="container">
-	<h1>Product: ${product.name}</h1>
+	    <h1>Product: ${product.name}</h1>
 
-	<form:form method="post" action="/products/${product.id}/update" modelattribute="product">
+        <form:form method="post" action="/products/${product.id}/update" modelattribute="product">
 
-		<div class="form-group" style="margin-top: 10px; margin-bottom: 10px;">
-			<label for="name">Name</label>
-			<input type="text" id="name" name="name" value="${product.name}" />
-		</div>
+            <div class="form-group" style="margin-top: 10px; margin-bottom: 10px;">
+                <label class="form-label" for="name">Name</label>
+                <input class="form-control" type="text" id="name" name="name" value="${product.name}" />
+            </div>
 
-		<div class="form-group" style="margin-top: 10px; margin-bottom: 10px;">
-			<label for="description">Description</label>
-			<input type="text" id="description" name="description" value="${product.description}" />
-		</div>
+            <div class="form-group" style="margin-top: 10px; margin-bottom: 10px;">
+                <label class="form-label" for="description">Description</label>
+                <input class="form-control" type="text" id="description" name="description" value="${product.description}" />
+            </div>
 
-		<div class="form-group" style="margin-top: 10px; margin-bottom: 10px;">
-			<label for="category">Category</label>
-			<input type="text" id="category" name="category" value="${product.category}" />
-		</div>
+            <div class="form-group" style="margin-top: 10px; margin-bottom: 10px;">
+                <label class="form-label" for="category">Category</label>
+                <input class="form-control" type="text" id="category" name="category" value="${product.category}" />
+            </div>
 
-		<div class="form-group" style="margin-top: 10px; margin-bottom: 10px;">
-			<label for="price">Price</label>
-			<input type="number" id="price" name="price" value="${product.price}" />
-		</div>
+            <div class="form-group" style="margin-top: 10px; margin-bottom: 10px;">
+                <label class="form-label" for="price">Price</label>
+                <input class="form-control" type="number" id="price" name="price" value="${product.price}" />
+            </div>
 
-		<div class="form-group" style="margin-top: 10px; margin-bottom: 10px;">
-			<label for="quantity">Quantity</label>
-			<input type="number" id="quantity" name="quantity" value="${product.quantity}" />
-		</div>
+            <div class="form-group" style="margin-top: 10px; margin-bottom: 10px;">
+                <label class="form-label" for="quantity">Quantity</label>
+                <input class="form-control" type="number" id="quantity" name="quantity" value="${product.quantity}" />
+            </div>
 
-		<div class="form-group" style="margin-top: 20px; margin-bottom: 10px;">
-			<button><a href="/products">Cancel</a></button>
-			<button type="submit">Update</button>
-		</div>
+            <div class="form-group" style="margin-top: 20px; margin-bottom: 10px;">
+                <a href="/products" class="btn btn-danger" role="button">Cancel</a>
+                <button class="btn btn-success" type="submit">Update</button>
+            </div>
 
-		<c:if test="${not empty msg}">
-		<p style="color: green;">${msg}</p>
-		</c:if>
-	</form:form>
+            <c:if test="${not empty msg}">
+            <p style="color: green;">${msg}</p>
+            </c:if>
+        </form:form>
+
+	    <%@include file="footer.html" %>
 	</div>
 
-	<footer style="margin-top: 30px;"><a href="/">KA Inventory System</a> &copy; 2024. Made with love in Penang.</footer>
+
+	<%@include file="lib-js.jsp" %>
 </body>
 </html>

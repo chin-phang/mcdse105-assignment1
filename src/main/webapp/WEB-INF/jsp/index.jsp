@@ -7,24 +7,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Homepage</title>
-	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <%@include file="lib-css.jsp" %>
 </head>
 </head>
 <body>
-	<h2>Welcome to KA Inventory Management System!</h2>
-
 	<div class="container">
+	    <h2>Welcome to KA Inventory Management System!</h2>
+
 		<ul>
 			<li><a href="/about">About</a></li>
 			<li><a href="/contact">Contact</a></li>
 			<li><a href="/products">Products</a></li>
-			<li><a href="/register">Register</a></li>
-			<li><a href="/login">Login</a></li>
 		</ul>
+
+        <%@include file="footer.html" %>
 	</div>
 
-	<footer style="margin-top: 20px;"><a href="/">KA Inventory System</a> &copy; 2024. Made with love in Penang.</footer>
-
-	<script src="/static/js/bootstrap.bundle.min.js"></script>
+	<%@include file="lib-js.jsp" %>
 </body>
 </html>
