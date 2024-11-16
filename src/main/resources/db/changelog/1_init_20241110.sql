@@ -8,7 +8,7 @@ create table `product` (
     name varchar(200) not null,
     description varchar(255) not null,
     category varchar(200) not null,
-    price float(10,2) not null,
+    price decimal(10,2) not null,
     quantity int,
     primary key (id)
 );

@@ -1,70 +1,34 @@
 package org.mcdse105.assignment1.entity;
 
 import jakarta.persistence.*;
+import lombok.*;
+
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "product")
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(length = 200, nullable = false)
     private String name;
 
-    private String description;
+    @Column(nullable = false)
+    private String description = "";
 
-    private String category;
+    @Column(length = 200, nullable = false)
+    private String category = "";
 
-    private float price;
+    @Column(precision = 10, scale = 2, nullable = false)
+    private BigDecimal price = BigDecimal.ZERO;
 
-    private Integer quantity;
+    private Integer quantity = 0;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public float getPrice() {
-        return price;
-    }
-
-    public void setPrice(float price) {
-        this.price = price;
-    }
-
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
-    }
 }

@@ -10,14 +10,24 @@
     <%@include file="lib-css.jsp" %>
 </head>
 <body>
-	<div class="container">
+	<div class="container position-relative" aria-live="polite" aria-atomic="true">
 	    <h1>Add New Product</h1>
 
         <form:form method="post" action="/products/new" modelattribute="product">
+            <div class="toast-container p-3 top-0 start-50 translate-middle-x">
+                <div class="toast text-danger border-0 <c:if test="${not empty errMsg}">show</c:if>" role="alert" aria-live="assertive" aria-atomic="true">
+                  <div class="d-flex">
+                    <div class="toast-body">
+                      ${errMsg}
+                    </div>
+                    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                  </div>
+                </div>
+            </div>
 
             <div class="mb-3" style="margin-top: 10px; margin-bottom: 10px;">
                 <label class="form-label" for="name">Name</label>
-                <input class="form-control" type="text" id="name" name="name" />
+                <input class="form-control type="text" id="name" name="name" />
             </div>
 
             <div class="mb-3" style="margin-top: 10px; margin-bottom: 10px;">
@@ -44,10 +54,6 @@
                 <a href="/products" class="btn btn-danger" role="button">Cancel</a>
                 <button class="btn btn-success" type="submit">Create</button>
             </div>
-
-            <c:if test="${not empty errmsg}">
-            <p style="color: red;">${errmsg}</p>
-            </c:if>
 
         </form:form>
 

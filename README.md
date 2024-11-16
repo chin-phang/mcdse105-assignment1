@@ -12,5 +12,5 @@ mvn clean package
 # Step 3: Run the application
 ```shell
 # in project root
-java -jar .\target\mcdse105-1.0-SNAPSHOT.war
+java -jar .\target\assignment1-0.0.1-SNAPSHOT.war
 ```
